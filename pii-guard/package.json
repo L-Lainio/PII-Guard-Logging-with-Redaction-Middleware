@@ -13,14 +13,9 @@
   "files": ["dist"],
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.build.json --watch",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "node --run lint:eslint",
-    "lint:eslint": "eslint .",
-    "format": "prettier . -w",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
