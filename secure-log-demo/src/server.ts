@@ -4,6 +4,16 @@ import { logger } from "./logger.js";
 
 const app = express();
 app.use(express.json());
+
+// Content-Security-Policy (local dev only)
+app.use((_req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'none'; connect-src 'self'; script-src 'self'; style-src 'self'"
+  );
+  next();
+});
+
 app.use(httpLogger);
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
