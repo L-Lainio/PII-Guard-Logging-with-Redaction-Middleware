@@ -8,9 +8,6 @@
 ![Docker](https://img.shields.io/badge/Dev%20Container-Docker-2496ED?logo=docker&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Testing-Vitest-6E9F18)
 ![ESLint](https://img.shields.io/badge/Linting-ESLint-4B32C3?logo=eslint&logoColor=white)
-
-## 🧠 Currently Learning & Building (The Cloud-Native Shift)
-
 **PII‑Guard** is a **TypeScript‑first redaction middleware** designed to prevent
 personally identifiable information (PII) and secrets from leaking into logs
 and structured payloads.
@@ -25,17 +22,24 @@ compliance‑aware systems.
 
 - Redacts PII from **plain text logs** and **structured objects**
 - Type‑safe, strict TypeScript API
-- Configurable redaction modes (placeholder, mask, remove, tokenized)
-- Designed for **logging pipelines** (not business logic)
+- Configurable redaction modes:
+  - placeholder
+  - mask
+  - remove
+  - tokenized
+- Designed for **logging pipelines**, not business logic
 - Zero telemetry — runs entirely locally
 - Framework‑agnostic core with logger integrations
+- Defensive defaults with explicit configuration
+
 
 ---
 
-## 📦 Install
+## 📦 Installation
 
 ```bash
 npm install pii-guard
+
 ```
 
 ```ts
@@ -109,7 +113,8 @@ reproducible TypeScript development environment powered by Docker.
 
 ---
 
-## 📄 License
+📜 License
+This application is covered under the MIT License.
 
-MIT ©
+© 2026 and beyond by Lora with 💖
 
